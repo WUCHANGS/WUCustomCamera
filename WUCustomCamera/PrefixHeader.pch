@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  WUCustomCamera
+//
+//  Created by 武昌 on 2018/5/3.
+//  Copyright © 2018年 武昌. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define    BOUNDS                 [[UIScreen mainScreen] bounds]
+#define    WIDTH                  [[UIScreen mainScreen] bounds].size.width
+#define    HEIGHT                 [[UIScreen mainScreen] bounds].size.height
+#define    HEXCOLORA(rgbValue, a)     [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0 blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:a]
+#define    HEXCOLOR(rgbValue)         HEXCOLORA(rgbValue, 1.0)
+#define    RGBCOLOR(r,g,b)            [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define    RGBACOLOR(r,g,b,a)         [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f \
+alpha:(a)]
+#define    RGBA(r,g,b,a)              (r)/255.0f, (g)/255.0f, (b)/255.0f, (a)
+
+
+#endif /* PrefixHeader_pch */
